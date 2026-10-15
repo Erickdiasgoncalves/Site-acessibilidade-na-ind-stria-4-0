@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Site acessível sobre acessibilidade na Indústria 4.0, tecnologias assistivas e formação em Desenvolvimento de Sistemas.">
+  <title>Acessibilidade na Indústria 4.0</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+<header class="site-header">
+  <div class="container">
+    <p class="eyebrow">Amostra Técnica 2026 · Turma 2I - DES</p>
+    <h1>Acessibilidade na Indústria 4.0</h1>
+    <p class="lead">Tecnologia com autonomia, inclusão e oportunidades para todos.</p>
+    <p class="team">Integrantes: Victor Gabriel, Luís, Milena, Erick Dias e Matheus Guindani · Orientador: Ricardo de Souza</p>
+    <div class="toolbar" aria-label="Ferramentas de acessibilidade">
+      <button type="button" id="readPage">Ler esta página em voz alta</button>
+      <button type="button" id="pauseSpeech">Pausar leitura</button>
+      <button type="button" id="resumeSpeech">Continuar leitura</button>
+      <button type="button" id="stopSpeech">Parar leitura</button>
+      <button type="button" id="contrastToggle" aria-pressed="false">Ativar alto contraste</button>
+      <label for="fontSize">Tamanho do texto</label>
+      <select id="fontSize">
+        <option value="normal">Normal</option><option value="large">Grande</option><option value="larger">Muito grande</option>
+      </select>
+      <label for="voiceSelect">Voz de leitura</label>
+      <select id="voiceSelect" aria-describedby="voiceHelp"><option value="">Voz padrão do sistema</option></select>
+      <span id="voiceHelp" class="toolbar-help">As vozes dependem do navegador e do sistema.</span>
+      <button type="button" id="voiceCommandButton" aria-pressed="false">Ativar comandos de voz</button>
+      <p id="voiceStatus" class="voice-status" role="status" aria-live="polite">Comandos de voz desligados.</p>
+    </div>
+  </div>
+</header>
+<nav class="main-nav" aria-label="Navegação principal">
+  <div class="container nav-inner">
+    <a href="#sobre">Sobre</a><a href="#barreiras">Barreiras</a><a href="#tecnologias">Tecnologias</a>
+    <a href="#disciplinas">Disciplinas do curso</a><a href="#libras">Libras</a><a href="#pesquisa">Pesquisa</a><a href="#referencias">Referências</a><a href="#chatbot">Chatbot</a>
+  </div>
+</nav>
+<main id="conteudo" class="container">
+  <section id="sobre" class="panel">
+    <h2>O que é a Indústria 4.0?</h2>
+    <p>A Indústria 4.0 integra tecnologias digitais aos processos de trabalho. Entre elas estão automação, robótica, inteligência artificial, análise de dados, sensores, sistemas conectados e Internet das Coisas.</p>
+    <p><strong>Pergunta central:</strong> a tecnologia está sendo projetada para que todas as pessoas consigam utilizá-la?</p>
+    <p>Nosso projeto procura mostrar que acessibilidade não é um detalhe opcional. Ela deve ser planejada desde o começo, testada com pessoas com deficiência e melhorada continuamente.</p>
+    <h3>Objetivo do projeto</h3>
+    <p>Desenvolver um site informativo acessível, com foco inicial na deficiência visual, apresentando barreiras, tecnologias assistivas e a relação entre as matérias de Desenvolvimento de Sistemas e soluções tecnológicas inclusivas.</p>
+  </section>
+  <section id="barreiras" class="panel">
+    <h2>Barreiras que podem excluir pessoas</h2>
+    <div class="grid">
+      <article class="card"><h3>Barreiras digitais</h3><p>Sites, documentos, sistemas e softwares que não funcionam bem com leitores de tela, teclado ou outros recursos assistivos.</p></article>
+      <article class="card"><h3>Barreiras físicas</h3><p>Rotas inacessíveis, calçadas inadequadas, escadas sem alternativas, falta de sinalização e equipamentos sem adaptações.</p></article>
+      <article class="card"><h3>Barreiras de comunicação</h3><p>Informações sem formatos alternativos, ausência de legendas, Libras ou linguagem compreensível quando necessários.</p></article>
+      <article class="card"><h3>Barreiras atitudinais</h3><p>Preconceito, baixa expectativa sobre as capacidades das pessoas e falta de preparo das equipes.</p></article>
+    </div>
+    <p class="callout">O problema não está na capacidade da pessoa, mas nas barreiras do ambiente, dos processos e das ferramentas.</p>
+  </section>
+  <section id="tecnologias" class="panel">
+    <h2>Tecnologias que podem ampliar a autonomia</h2>
+    <ul>
+      <li><strong>Leitores de tela:</strong> transformam textos e controles acessíveis em fala ou Braille, como NVDA no Windows e TalkBack no Android.</li>
+      <li><strong>Inteligência artificial:</strong> pode ajudar a descrever imagens, resumir documentos e apoiar tarefas, mas suas respostas precisam ser verificadas.</li>
+      <li><strong>Reconhecimento de voz:</strong> permite ditar texto ou comandos quando o sistema oferece suporte acessível.</li>
+      <li><strong>Sensores e robótica:</strong> podem fornecer alertas, apoiar tarefas e reduzir riscos, desde que os avisos sejam acessíveis.</li>
+      <li><strong>Automação:</strong> pode reduzir tarefas repetitivas, mas não deve excluir trabalhadores de processos de seleção, treinamento ou operação.</li>
+      <li><strong>Aplicativos acessíveis:</strong> devem oferecer navegação por teclado, rótulos claros, foco visível, bom contraste e compatibilidade com tecnologias assistivas.</li>
+    </ul>
+    <p>Uma tecnologia, por si só, não garante inclusão. É necessário combinar acessibilidade, formação, adaptações, participação dos usuários e respeito aos direitos.</p>
+  </section>
+  <section id="disciplinas" class="panel">
+    <h2>Onde as disciplinas do curso aparecem na prática?</h2>
+    <p>As disciplinas de Desenvolvimento de Sistemas ajudam a planejar, construir, testar e manter soluções digitais. Os exemplos abaixo relacionam as matérias informadas pelo grupo com este site e com aplicações possíveis na Indústria 4.0. A oferta e o nome exato de cada disciplina podem variar conforme a matriz curricular e o ano escolar.</p>
+    <label for="subjectSearch">Pesquisar uma disciplina</label>
+    <input id="subjectSearch" type="search" placeholder="Ex.: banco de dados, front-end, lógica" autocomplete="off">
+    <p id="subjectCount" aria-live="polite"></p>
+    <div id="subjectList" class="subject-list"></div>
+  </section>
+  <section id="libras" class="panel">
+    <h2>Libras: tradução e comunicação acessível</h2>
+    <p>O site integra o recurso VLibras para ajudar a traduzir conteúdos em português para Libras por meio de um avatar. Procure o botão flutuante do VLibras na página; a primeira utilização pode precisar de conexão com a internet.</p>
+    <p><strong>Como ativar:</strong> localize o botão de acessibilidade do VLibras, abra o recurso e siga as instruções apresentadas. A disponibilidade pode variar conforme o navegador, a conexão e o dispositivo.</p>
+    <h3>Tradução de Libras para texto e voz</h3>
+    <p><strong>Limitação importante deste protótipo:</strong> a tradução automática de sinais de Libras captados pela câmera para texto e voz ainda não está implementada. Ela exige um sistema de reconhecimento de sinais treinado para Libras, além de testes com pessoas surdas e cuidados com a privacidade. Não seria correto fingir que a câmera já entende Libras.</p>
+    <p>Enquanto essa integração não estiver pronta, a pessoa pode usar o VLibras para acompanhar a tradução de português para Libras. O projeto deixa registrada como próxima etapa a tradução no sentido inverso: Libras para texto e, opcionalmente, voz sintetizada.</p>
+  </section>
+  <section id="pesquisa" class="panel">
+    <h2>Pesquisa sobre acessibilidade e trabalho</h2>
+    <p>O formulário do projeto investigou experiências profissionais, barreiras físicas e digitais, tecnologias assistivas e ideias para melhorar a inclusão na Indústria 4.0.</p>
+    <h3>Temas observados nas respostas disponíveis</h3>
+    <ul>
+      <li>Mobilidade urbana, calçadas, transporte e necessidade de rampas ou adaptações.</li>
+      <li>Documentos digitalizados com reconhecimento de texto limitado e softwares incompatíveis com leitores de tela.</li>
+      <li>Importância de adaptações, treinamento das equipes e apoio adequado.</li>
+      <li>Uso de leitores de tela e aplicativos, além de sugestões de IA para descrever imagens e documentos.</li>
+      <li>Oportunidades com IA, sensores e robótica, junto de riscos como automação sem inclusão e sistemas inacessíveis.</li>
+    </ul>
+    <p><strong>Nota metodológica:</strong> o material consultado resume três respostas. Esse número é pequeno e não representa todas as pessoas com deficiência; por isso, os relatos são apresentados como experiências e sugestões, não como estatísticas gerais.</p>
+    <p><a class="button-link" href="https://docs.google.com/forms/d/e/1FAIpQLScav0FUw9mzFAIn3ib9g8HLRANPATquzGempYkvdPbQe7os9g/viewform?usp=header" target="_blank" rel="noopener">Abrir formulário de pesquisa (nova aba)</a></p>
+  </section>
+  <section id="boas-praticas" class="panel">
+    <h2>Como tornar um site mais acessível?</h2>
+    <ul>
+      <li>Usar títulos organizados e HTML semântico.</li>
+      <li>Permitir navegar por teclado, com foco visível e sem armadilhas.</li>
+      <li>Identificar botões, links, campos e mensagens de erro com nomes claros.</li>
+      <li>Oferecer contraste adequado e permitir ampliar o texto.</li>
+      <li>Fornecer alternativas textuais para imagens informativas.</li>
+      <li>Testar com leitores de tela e, sempre que possível, com pessoas com deficiência.</li>
+    </ul>
+    <p>O projeto usa as WCAG 2.2 como referência. Este protótipo inclui recursos básicos, mas isso não significa certificação formal de conformidade: testes reais continuam necessários.</p>
+  </section>
+  <section id="referencias" class="panel">
+    <h2>Referências e materiais de apoio</h2>
+    <ul>
+      <li><a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener">W3C — Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.2</a></li>
+      <li><a href="https://webaim.org/" target="_blank" rel="noopener">WebAIM — recursos de acessibilidade web</a></li>
+      <li><a href="https://webaim.org/standards/wcag/checklist" target="_blank" rel="noopener">WebAIM — checklist WCAG</a></li>
+      <li><a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm" target="_blank" rel="noopener">Lei Brasileira de Inclusão — Lei nº 13.146/2015</a></li>
+      <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/Accessibility" target="_blank" rel="noopener">MDN — acessibilidade web</a></li>
+    </ul>
+  </section>
+  <section id="chatbot" class="panel">
+    <h2>Chatbot do site</h2>
+    <p>Faça perguntas sobre o conteúdo deste site. O chatbot funciona localmente no navegador, sem enviar sua pergunta para um serviço externo. Ele responde com base em um conjunto de perguntas e palavras-chave sobre este projeto.</p>
+    <div class="chat-box" aria-label="Conversa com o chatbot">
+      <div id="chatMessages" class="chat-messages" role="log" aria-live="polite" aria-relevant="additions">
+        <p class="bot-message"><strong>Assistente:</strong> Olá! Posso explicar o projeto, a Indústria 4.0, acessibilidade, tecnologias e disciplinas do curso. O que você gostaria de saber?</p>
+      </div>
+      <form id="chatForm">
+        <label for="chatInput">Digite sua pergunta</label>
+        <input id="chatInput" type="text" autocomplete="off" required placeholder="Ex.: Para que serve banco de dados?">
+        <div class="chat-actions"><button type="submit">Enviar pergunta</button><button type="button" id="speakLast">Ler última resposta</button><button type="button" id="clearChat">Limpar conversa</button></div>
+      </form>
+      <p class="small">Dica: experimente perguntar “O que é Indústria 4.0?”, “Como o site ajuda pessoas cegas?” ou “Onde entra programação front-end?”.</p>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p><strong>Acessibilidade na Indústria 4.0</strong> · Amostra Técnica 2026 · 2I - DES</p>
+    <p>Inovação de qualidade coloca as pessoas no centro da tecnologia.</p>
+    <button type="button" id="backTop">Voltar ao início</button>
+  </div>
+</footer>
+<!-- Widget oficial VLibras: tradução de conteúdo em português para Libras. Requer internet. -->
+<div vw class="enabled" aria-label="Tradutor de português para Libras">
+  <div vw-access-button class="active" aria-label="Abrir tradutor VLibras"></div>
+  <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>if (window.VLibras && window.VLibras.Widget) { new window.VLibras.Widget('https://vlibras.gov.br/app'); }</script>
+</body>
+</html>
